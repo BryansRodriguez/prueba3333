@@ -28,7 +28,7 @@ public class ProductoServiceImpl implements ProductoService{
     @Override
     @Transactional(readOnly = true)
     public List<Producto> getAllProducto() {
-        return productoRepository.findAll();
+        return productoRepository.findByListar();
     }
 
     @Override

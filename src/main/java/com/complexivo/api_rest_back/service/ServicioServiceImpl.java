@@ -38,7 +38,7 @@ public class ServicioServiceImpl implements ServicioService{
     @Override
     @Transactional(readOnly = true)
     public List<Servicio> getAllServicio() {
-        return Repository.findAll();
+        return Repository.findByListar();
     }
 
     @Override

@@ -21,6 +21,9 @@ public interface EmpresaRepository extends JpaRepository<Empresa, Long> {
 	
     public Boolean existsByEmpruc(String empruc);
     
+    @Query(value = "select * from railway.empresa where idempresa > 1 ",nativeQuery=true)
+    public List<Empresa> findByListar();
+    
     
     @Query(value = "select e.empnombre, p.nombre, sum(c.cantidad), sum(c.precio) from railway.empresa e inner join railway.producto p on e.idempresa = p.idempresa inner join railway.detalle c on p.idproducto = c.idproducto where p.idempresa = :id",nativeQuery=true)
     public List<Empresa> findByidpro(long id);

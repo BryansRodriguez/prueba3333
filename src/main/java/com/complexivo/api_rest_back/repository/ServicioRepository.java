@@ -21,6 +21,9 @@ public interface ServicioRepository extends JpaRepository<Servicio, Long> {
 	
     public Boolean existsBySernombre(String sernombre);
     
+    @Query(value = "select * from railway.servicio where idservicio > 1 ",nativeQuery=true)
+    public List<Servicio> findByListar();
+    
     @Query(value = "select s.idservicio, s.sernombre, s.serprecio, s.serdescripcion, s.serduracion, s.serimagen,s.idempresa, s.idcatser, s.idsubcat from railway.servicio s inner join railway.categoria_servicio c on s.idcatser = c.idcatser where c.idcatser = :id",nativeQuery=true)
     public List<Servicio> findByidcatser(long id);
     

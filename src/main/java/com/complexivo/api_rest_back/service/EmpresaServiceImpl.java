@@ -38,7 +38,7 @@ public class EmpresaServiceImpl implements EmpresaService {
     @Override
     @Transactional(readOnly = true)
     public List<Empresa> getAllEmpresa() {
-        return empresaRepository.findAll();
+        return empresaRepository.findByListar();
     }
 
     @Override
