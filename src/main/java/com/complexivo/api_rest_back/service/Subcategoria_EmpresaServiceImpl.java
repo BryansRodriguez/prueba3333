@@ -60,6 +60,7 @@ public class Subcategoria_EmpresaServiceImpl implements Subategoria_EmpresaServi
 
         c.setSubcatnombre(subcategoria_Empresa.getSubcatnombre());
         c.setSubcatdescripcion(subcategoria_Empresa.getSubcatdescripcion());
+        c.setIdcatemp(subcategoria_Empresa.getIdcatemp());
 
         return repository.save(c);
     }
