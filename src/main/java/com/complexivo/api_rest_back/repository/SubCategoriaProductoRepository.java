@@ -17,6 +17,9 @@ public interface SubCategoriaProductoRepository extends JpaRepository<SubCategor
 	
     public Boolean existsBySubcatpronombre(String subcatpronombre);
     
+    @Query(value = "select * from railway.subcategoriaproducto where subcatproid > 1 ",nativeQuery=true)
+    public List<SubCategoriaProducto> findByListar();
+    
     @Query(value = "select p.subcatproid, p.subcatpronombre, p.subcatprodescripcion, p.catproid from railway.subcategoriaproducto p inner join railway.categoriaproducto c on p.catproid = c.catproid where c.catproid = :id",nativeQuery=true)
     public List<SubCategoriaProducto> findByCatproid(long id);
 }

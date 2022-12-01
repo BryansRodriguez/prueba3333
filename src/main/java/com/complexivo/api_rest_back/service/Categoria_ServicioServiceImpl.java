@@ -39,7 +39,7 @@ public class Categoria_ServicioServiceImpl implements Categoria_ServicioService{
 
     @Override
     public List<Categoria_Servicio> getAllCategoria() {
-         return repository.findAll();
+         return repository.findByListar();
     }
 
     @Override

@@ -30,7 +30,7 @@ public class SubCategoriaProductoServiceImpl implements SubCategoriaProductoServ
     @Override
     @Transactional(readOnly = true)
     public List<SubCategoriaProducto> getAllSubCategoriaProducto() {
-        return subcategoriaProductoRepository.findAll();
+        return subcategoriaProductoRepository.findByListar();
     }
 
     @Override

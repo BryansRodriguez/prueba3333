@@ -35,7 +35,7 @@ public class Subcategoria_ServicioServiceImpl implements Subategoria_ServicioSer
 
     @Override
     public List<Subcategoria_Servicio> getAllSubcategoria() {
-        return repository.findAll();
+        return repository.findByListar();
     }
 
     @Override

@@ -30,7 +30,7 @@ public class CategoriaProductoServiceImpl implements CategoriaProductoService{
     @Override
     @Transactional(readOnly = true)
     public List<CategoriaProducto> getAllCategoriaProducto() {
-        return categoriaProductoRepository.findAll();
+        return categoriaProductoRepository.findByListar();
     }
 
     @Override
