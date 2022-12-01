@@ -49,6 +49,7 @@ public class SubCategoriaProductoServiceImpl implements SubCategoriaProductoServ
         
         scp.setSubcatpronombre(subcategoriaproducto.getSubcatpronombre());
         scp.setSubcatprodescripcion(subcategoriaproducto.getSubcatprodescripcion());
+        scp.setCatproid(subcategoriaproducto.getCatproid());
 
         return subcategoriaProductoRepository.save(scp);
     }
